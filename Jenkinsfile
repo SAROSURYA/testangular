@@ -9,12 +9,6 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      steps {
-        
-      }
-    } 
-
     stage('Build and Run with Docker Compose') {
       steps {
         script {
