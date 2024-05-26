@@ -3,16 +3,10 @@ pipeline {
 
    stages {
 
-    stage('Checkout SCM') {
-      steps {
-          checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/SAROSURYA/testangular.git']]])
-      }
-    }
-
     stage('Clone Repository') {
       steps { 
-        git 'https://github.com/SAROSURYA/testangular.git'
-      }
+        git 'https://github.com/SAROSURYA/testangular.git -b main'
+      } 
     }
 
     stage('Build and Run with Docker Compose') {
