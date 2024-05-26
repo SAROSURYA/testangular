@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  webapp:
+    build: .
+    image: angular-test:latest
+    ports:
+      - "4200:80"
